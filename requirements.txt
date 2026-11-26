@@ -1,0 +1,4 @@
+zenml[local]==0.96.4
+scikit-learn
+pandas
+pytest
