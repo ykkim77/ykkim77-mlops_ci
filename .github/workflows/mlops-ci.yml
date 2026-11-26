@@ -1,4 +1,4 @@
-name: Week05 MLOps CI
+name: Week05 MLOps CI Pipeline
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
 
 jobs:
 
-  test:
+  test-and-pipeline:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,3 +31,11 @@ jobs:
       - name: Run tests
         run: |
           pytest -v
+
+      - name: Initialize ZenML
+        run: |
+          zenml init
+
+      - name: Run ZenML pipeline
+        run: |
+          python run_pipeline.py
