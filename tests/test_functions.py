@@ -5,7 +5,7 @@ def test_preprocess_data():
 
     X_train, X_test, y_train, y_test = preprocess_data()
 
-    assert len(X_train) > 0
+    assert len(X_train) == 999
     assert len(X_test) > 0
     assert len(X_train) + len(X_test) == 150
     assert X_train.shape[1] == 4
